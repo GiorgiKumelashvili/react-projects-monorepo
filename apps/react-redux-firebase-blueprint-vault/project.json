@@ -1,0 +1,74 @@
+{
+  "name": "react-redux-firebase-blueprint-vault",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-redux-firebase-blueprint-vault/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/react-redux-firebase-blueprint-vault"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-redux-firebase-blueprint-vault:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-redux-firebase-blueprint-vault:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "react-redux-firebase-blueprint-vault:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-redux-firebase-blueprint-vault:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-redux-firebase-blueprint-vault:build:development"
+        },
+        "production": {
+          "buildTarget": "react-redux-firebase-blueprint-vault:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/apps/react-redux-firebase-blueprint-vault"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/react-redux-firebase-blueprint-vault"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/react-redux-firebase-blueprint-vault/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
