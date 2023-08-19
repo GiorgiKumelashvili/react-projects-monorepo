@@ -2,7 +2,9 @@
   "name": "@react-projects-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start:redux-fbv": "nx run react-redux-firebase-blueprint-vault:serve"
+  },
   "private": true,
   "devDependencies": {
     "@nx/eslint-plugin": "16.7.2",
@@ -22,6 +24,7 @@
     "@vitejs/plugin-react": "~4.0.0",
     "@vitest/coverage-c8": "~0.32.0",
     "@vitest/ui": "~0.32.0",
+    "autoprefixer": "^10.4.15",
     "eslint": "~8.46.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-import": "2.27.5",
@@ -31,14 +34,29 @@
     "jsdom": "~22.1.0",
     "nx": "16.5.3",
     "nx-cloud": "latest",
+    "postcss": "^8.4.28",
     "prettier": "^2.6.2",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "tailwindcss": "^3.3.3",
     "typescript": "~5.1.3",
     "vite": "~4.3.9",
     "vitest": "~0.32.0"
   },
   "dependencies": {
+    "@blueprintjs/core": "^5.2.0",
+    "@blueprintjs/table": "^5.0.8",
+    "@reduxjs/toolkit": "^1.9.5",
     "@swc/helpers": "~0.5.0",
+    "axios": "^1.4.0",
+    "firebase": "^10.2.0",
+    "formik": "^2.4.3",
+    "node-sass": "^9.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.15.0",
+    "uuid": "^9.0.0",
+    "yup": "^1.2.0"
   }
 }

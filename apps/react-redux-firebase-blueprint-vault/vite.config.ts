@@ -9,6 +9,9 @@ export default defineConfig({
   server: {
     port: 4200,
     host: 'localhost',
+    fs: {
+      allow: ['../../node_modules/@blueprintjs/icons/lib/css'],
+    },
   },
 
   preview: {

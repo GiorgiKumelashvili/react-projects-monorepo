@@ -68,6 +68,14 @@
           "apps/react-redux-firebase-blueprint-vault/**/*.{ts,tsx,js,jsx}"
         ]
       }
+    },
+    "targets": {
+      "build": {
+        "executor": "@nx/web:webpack",
+        "options": {
+          "postcssConfig": "apps/react-redux-firebase-blueprint-vault/postcss.config.js"
+        }
+      }
     }
   },
   "tags": []
