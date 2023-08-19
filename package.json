@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:redux-fbv": "nx run react-redux-firebase-blueprint-vault:serve"
+    "start:inversify": "nx run react-inversify:serve",
+    "start:rfbv": "nx run react-redux-firebase-blueprint-vault:serve"
   },
   "private": true,
   "devDependencies": {
+    "@babel/plugin-syntax-decorators": "^7.22.10",
     "@nx/eslint-plugin": "16.7.2",
     "@nx/js": "16.7.2",
     "@nx/linter": "16.7.2",
@@ -19,6 +21,7 @@
     "@types/node": "18.14.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "@vitejs/plugin-react": "~4.0.0",
@@ -51,11 +54,17 @@
     "axios": "^1.4.0",
     "firebase": "^10.2.0",
     "formik": "^2.4.3",
+    "inversify": "^6.0.1",
+    "inversify-binding-decorators": "^4.0.0",
+    "inversify-react": "^1.1.0",
+    "mobx": "^6.10.0",
+    "mobx-react": "^9.0.0",
     "node-sass": "^9.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.1.2",
     "react-router-dom": "^6.15.0",
+    "reflect-metadata": "^0.1.13",
     "uuid": "^9.0.0",
     "yup": "^1.2.0"
   }

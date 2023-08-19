@@ -16,7 +16,20 @@ export default defineConfig({
     host: 'localhost',
   },
 
-  plugins: [react(), nxViteTsPaths()],
+  plugins: [
+    react({
+      babel: {
+        // parserOpts: {
+        //   plugins: ['decorators-legacy', 'classProperties'],
+        // },
+        plugins: [
+          ['@babel/plugin-proposal-decorators', { legacy: true }],
+          ['@babel/plugin-proposal-class-properties', { loose: true }],
+        ],
+      },
+    }),
+    nxViteTsPaths(),
+  ],
 
   // Uncomment this if you are using workers.
   // worker: {
